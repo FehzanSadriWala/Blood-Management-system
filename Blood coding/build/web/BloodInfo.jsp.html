@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>RaktPlus</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/login.css" rel="stylesheet" type="text/css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Sciencelab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web 
+template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function 
+hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/modernizr.custom.97074.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+ <!--script-->
+</head>
+<body background="images/blueb.jpg">
+    <jsp:include page="Header.jsp"></jsp:include>
+    <div class="services-section">
+        <div class="container">
+            <h3>General Information About Blood</h3>
+            <div class="services-grids">
+                <section>
+                    <ul id="da-thumbs" class="da-thumbs">
+                        <li><a href="images/download (1).jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                                <img src="images/download (1).jpg" alt=""/></a></li>
+			<li><a href="images/images (1).jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                               <img src="images/images (1).jpg" alt=""/> </a></li>
+			<li><a href="images/images (2).jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                                <img src="images/images (2).jpg" alt=""/></a></li>&emsp;
+                       <h2>Blood Types</h2>
+                        <p>Human blood is grouped into four types: A, B, AB, and O. Each letter refers to a kind of antigen, or protein, on the surface of red blood cells. For example, the surface of red blood cells in Type A blood has antigens known as A-antigens.</p><br/>
+                        <h2>The Rh Factor</h2>
+                        <p>Each blood type is also grouped by its Rhesus factor, or Rh factor. Blood is either Rh positive (Rh+) or Rh negative (Rh-). Rhesus refers to another type of antigen, or protein, on the surface of red blood cells. The name Rhesus comes from Rhesus monkeys, in which the protein was discovered. </p><br/> 
+                        <h2>Blood Transfusions</h2>
+                        <p>Blood types become very important when a blood transfusion is necessary. In a blood transfusion, a patient must receive a blood type that is compatible with his or her own blood type?that is, the donated blood must be accepted by the patient?s own blood. If the blood types are not compatible, red blood cells will clump together, making clots that can block blood vessels and cause death.
+                          Type O? blood is considered the ?universal donor? because it can be donated to people of any blood type. Type AB+ blood is considered the ?universal recipient? because people with this type can receive any blood type.</p> <br/>
+                        <div class="clearfix"></div>
+                    </ul>
+                    </section>
+                    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+                    <script type="text/javascript">
+			$(function() {
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+			});
+                    </script>
+            </div>
+        </div>
+    </div>
+    <jsp:include page="Footer.jsp"></jsp:include>
+</body>
+</html>

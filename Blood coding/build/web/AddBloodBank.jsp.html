@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>RaktPlus</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Sciencelab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web 
+template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function 
+hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/modernizr.custom.97074.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+                <script type="text/javascript">
+                    function onlyAlphabets(e, t) 
+                    {
+                        try 
+                        {
+                            if (window.event) 
+                            {
+                                var charCode = window.event.keyCode;
+                            }
+                            else if (e) 
+                            {
+                                var charCode = e.which;
+                            }
+                            else 
+                            {
+                                return true;
+                            }
+                            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                                return true;
+                            else
+                                alert("only characters");
+                                return false;
+                        }
+                        catch (err) 
+                        {
+                            alert(err.Description);
+                        }
+                    }                       
+                </script>
+<!--script-->
+</head>
+<body background="images/backk.gif">
+    <jsp:include page="Header.jsp"></jsp:include>
+    <%
+            String s= (String)session.getAttribute("uname");
+            if(s!=null && "admin".equals(s.intern()))
+            {%>
+    <div class="col-md-3" style="background-color: burlywood; height: 680px;">
+        <center><h3 style="margin-top: 30px; color: saddlebrown;">RaktPlus @ your service</h3><br/><br/>
+                    <table>
+                    <tr>
+                        <td><a href="AboutHospital.jsp"><input type="submit" value="About Hospital" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="AboutDoctors.jsp"><input type="submit" value="About Doctors" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="BloodInfo.jsp"><input type="submit" value="Blood Info" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="DonorInstruction.jsp"><input type="submit" value="Donor Instruction" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="HealthTips.jsp"><input type="submit" value="Health Tips" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="HelpfulDonation.jsp"><input type="submit" value="Helpful Donation" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="NewsBlood.jsp"><input type="submit" value="Blood Bank" style="width:200px; height:40px;font-size: larger;"></a></td>
+                    </tr>
+                    </table>
+        </center>
+                </div>
+    <div class="team">
+        <div class="container"><center>
+                <img src="images/AddBloodBank.JPG" alt=""/></center>
+            <div class="team-info">
+            <form action="Addbean.jsp">
+                <center>
+                <table>
+                    <tr>
+                        <td><h2 style="font-family: Times New Roman;">Name of Organization: </h2></td>
+                        <td><input type="text" name="oname" onkeypress="return onlyAlphabets(event,this);" id="fn" style="font-size: large;font-family: monospace; font-weight: bold;" placeholder="Enter name" required></td>
+                    </tr>
+                    <tr>
+                        <td><h2 style="font-family: Times New Roman;">Email Id: </h2></td>
+                        <td><input type="email" name="email" style="font-size: large;font-family: monospace; font-weight: bold;"placeholder="Enter email id" required></td>
+                    </tr>
+                    <tr>
+                        <td><h2 style="font-family: Times New Roman;">Contact No.: </h2></td>
+                        <td><input type="text" name="cno" pattern="[0-9]{10}" title="ten digit number" maxlength="10" style="font-size: large;font-family: monospace; font-weight: bold;" placeholder="Enter contact no." required></td>
+                    </tr>
+                </table></center><br>
+                <center>
+                    <input type="submit" value="Add" style="color:black; width:100px; height:40px;font-size: larger;">
+                    &emsp;&emsp;&emsp;&emsp;
+                    <input type="reset" value="Reset" style="color:black; width:100px; height:40px;font-size: larger;">
+                </center>
+            </form>
+        </center>
+        </div>
+    </div>
+</div>
+    <%}
+            else
+            {%>
+            <img src="images/PlzLogin.png" alt=""/>
+            <%}
+        %>
+    <jsp:include page="Footer.jsp"></jsp:include>
+</body>
+</html>

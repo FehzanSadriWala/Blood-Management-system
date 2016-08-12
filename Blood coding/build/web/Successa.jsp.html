@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Blood Bank</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Sciencelab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web 
+template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function 
+hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/modernizr.custom.97074.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!--script-->
+</head>
+<body background="images/backk.gif">
+    <jsp:include page="Header.jsp"></jsp:include>
+    <div class="team">
+    <div class="container">
+    <div class="team-info">
+            <%
+                String p= request.getParameter("a");
+                if(p.equals("add"))
+                {
+            %>
+                <center><h3>Successfully added blood units.</h3><br/><br/><br/><br/>
+                    <h2>Do you want to add more units?</h2><br/><br/><br/>
+                <a href="AddBloodUnit.jsp"><input type="Submit" value="Yes" style="color:blue; width:100px; height:40px; font-size: large;"></a>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="Admin.jsp"><input type="Submit" value="No" style="color:blue; width:100px; height:40px; font-size: large;"></a><br/><br/>
+                </center>
+            <%
+                }
+                if (p.equals("del"))
+                {
+            %>
+                <center><h3>Successfully deleted blood units.</h3><br/><br/><br/><br/>
+                    <h2>Do you want to delete more units?</h2><br/><br/><br/>
+                <a href="DeleteBloodUnit.jsp"><input type="Submit" value="Yes" style="color:blue; width:100px; height:40px; font-size: large;"></a>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="Admin.jsp"><input type="Submit" value="No" style="color:blue; width:100px; height:40px; font-size: large;"></a><br/><br/>
+                </center>
+            <%
+                }
+                if (p.equals("addo"))
+                {
+            %>
+            <center><h3>Successfully added organization.</h3><br/><br/><br/><br/>
+                    <h2>Do you want to add more units?</h2><br/><br/><br/>
+                <a href="AddBloodBank.jsp"><input type="Submit" value="Yes" style="color:blue; width:100px; height:40px; font-size: large;"></a>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="Admin.jsp"><input type="Submit" value="No" style="color:blue; width:100px; height:40px; font-size: large;"></a><br/><br/>
+            </center>
+            <%
+                }
+            %>
+    </div></div></div>
+    <jsp:include page="Footer.jsp"></jsp:include>
+</body>
+</html>
